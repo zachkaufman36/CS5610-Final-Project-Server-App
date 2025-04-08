@@ -1,12 +1,24 @@
 export default [
-    { "_id": "Q101", "title": "Propulsion Assignment", "course": "RS101", "release_date": "May 6, 2025, 12:00 AM", "due_date": "May 13, 2025, 11:59 PM", "points": "100" },
-    { "_id": "Q102", "title": "Combustion Analysis", "course": "RS101", "release_date": "May 13, 2025, 12:00 AM", "due_date": "May 20, 2025, 11:59 PM", "points": "125" },
-    { "_id": "Q103", "title": "Nozzle Design Project", "course": "RS101", "release_date": "May 20, 2025, 12:00 AM", "due_date": "May 27, 2025, 11:59 PM", "points": "75" },
-    { "_id": "Q201", "title": "Aerodynamics Quiz", "course": "RS102", "release_date": "May 6, 2025, 12:00 AM", "due_date": "May 13, 2025, 11:59 PM", "points": "100" },
-    { "_id": "Q202", "title": "Flow Analysis", "course": "RS102", "release_date": "May 13, 2025, 12:00 AM", "due_date": "May 20, 2025, 11:59 PM", "points": "125" },
-    { "_id": "Q203", "title": "Heating Analysis", "course": "RS102", "release_date": "May 20, 2025, 12:00 AM", "due_date": "May 27, 2025, 11:59 PM", "points": "75" },
-    { "_id": "Q301", "title": "Structural Design Task", "course": "RS103", "release_date": "May 6, 2025, 12:00 AM", "due_date": "May 13, 2025, 11:59 PM", "points": "100" },
-    { "_id": "Q302", "title": "Orbital Calculations", "course": "RS103", "release_date": "May 13, 2025, 12:00 AM", "due_date": "May 20, 2025, 11:59 PM", "points": "125" },
-    { "_id": "Q303", "title": "Systems Engineering Exam", "course": "RS103", "release_date": "May 20, 2025, 12:00 AM", "due_date": "May 27, 2025, 11:59 PM", "points": "75" }
+    { 
+        "_id": "Q101", 
+        "published": "false", 
+        "title": "Something long enough", 
+        "course": "RS101", 
+        "quiz_type": "Graded Quiz", 
+        "points": "100", 
+        "assignment_group": "Quizzes", 
+        "shuffle_answers": "true", 
+        "time_limit": "20", 
+        "multiple_attempts": "false", 
+        "attempts": "1", 
+        "show_correct_answers": "true", 
+        "uses_access_code": "false", 
+        "access_code": "", 
+        "single_question_at_a_time": "true", 
+        "webcam": "false", 
+        "lock_after_answer": "false", 
+        "due_date": "March 13, 2025 12:00AM", 
+        "available_date": "March 6, 2025 12:00AM",
+        "until_date": "March 13, 2025 12:00AM" 
+    }
 ]
-  
