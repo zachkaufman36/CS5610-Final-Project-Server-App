@@ -66,7 +66,7 @@ export default function CourseRoutes(app) {
       ...req.body,
       course: courseId,
     };
-    const newQuiz = quizDao.createAssignment(quiz);
+    const newQuiz = quizzesDao.createQuiz(quiz);
     res.send(newQuiz);
   });
 }
