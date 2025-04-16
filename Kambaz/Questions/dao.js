@@ -1,22 +1,29 @@
 import model from './model.js';
-export const createQuestion = (quiz, question) => {
-    delete question._id;
-    question.id = 'QU' + new Date().getTime().toString();
-    question.quizId = quiz;
+
+export function createQuestion(quiz, question) {
     return model.create(question);
-};
-export const findAllQuestions = () => model.find();
-export const findQuestionByQuiz = (quiz) => model.find({ quizId: quiz });
-export const updateQuestion = async (questionId, question) => {
+}
+
+export function findAllQuestions() {
+    return model.find();
+}
+
+export function findQuestionByQuiz(quiz) {
+    return model.find({ quizId: quiz });
+}
+
+export function updateQuestion(questionId, question) {
     try {
-        const result = await model.updateOne({ id: questionId }, { $set: question });
+        return model.updateOne({ id: questionId }, { $set: question });
     } catch (error) {
         console.error('Error updating question:', error);
-        // throw error;
     }
-};
-export const deleteQuestion = (questionId) => {
-    const status = model.findOneAndDelete({ id: questionId });
-    return status;
-};
-export const findQuestion = async (questionId) => await model.findOne({ id: questionId });
+}
+
+export function deleteQuestion(questionId) {
+    return model.findOneAndDelete({ id: questionId });
+}
+
+export function findQuestion(questionId) {
+    return model.findOne({ id: questionId });
+}
