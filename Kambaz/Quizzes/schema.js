@@ -24,6 +24,10 @@ const quizzesSchema = new mongoose.Schema(
             type: Boolean,
             default: true,
         },
+        timeLimitBool: {
+            type: Boolean,
+            default: true,
+        },
         timeLimit: {
             type: Number,
             default: 20,
@@ -41,6 +45,10 @@ const quizzesSchema = new mongoose.Schema(
             type: Boolean,
             default: true,
         },
+        accessCodeBool: {
+            type: Boolean,
+            default: false,
+        },
         accessCode: {
             type: String,
             default: '',
@@ -57,9 +65,9 @@ const quizzesSchema = new mongoose.Schema(
             type: Boolean,
             default: false,
         },
-        due: Date,
-        availableFrom: Date,
-        availableUntil: Date,
+        due: String,
+        availableFrom: String,
+        availableUntil: String,
     },
     { collection: 'quizzes' }
 );
