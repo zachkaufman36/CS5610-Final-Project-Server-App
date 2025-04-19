@@ -32,5 +32,20 @@ function QuestionRoutes(app) {
         const questions = await dao.findQuestionByQuiz(quizId);
         res.send(questions);
     });
+
+    // get Question count For A Quiz
+    app.get('/api/Quizzes/:quizId/questions/count', async (req, res) => {
+        const { quizId } = req.params;
+        const questions = await dao.findQuestionByQuiz(quizId);
+        res.send(questions.length);
+    });
+
+    // get total points For A Quiz
+    app.get('/api/Quizzes/:quizId/points/', async (req, res) => {
+        const { quizId } = req.params;
+        const questions = await dao.findQuestionByQuiz(quizId);
+        const totalPoints = questions.reduce((sum, question) => sum + (question.points || 0), 0);
+        res.send({ totalPoints: totalPoints });
+    });
 }
 export default QuestionRoutes;
