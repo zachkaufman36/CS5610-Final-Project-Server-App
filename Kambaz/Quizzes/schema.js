@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 const quizzesSchema = new mongoose.Schema(
     {
         _id: String,
-        // _id: mongoose.Schema.Types.ObjectId,
         published: { type: Boolean, default: false },
         title: { type: String, required: true },
         course: { type: String, ref: 'CourseModel' },

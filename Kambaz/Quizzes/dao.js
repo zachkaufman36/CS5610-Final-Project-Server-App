@@ -1,6 +1,6 @@
 import model from './model.js';
 
-export function findAllCourseQuizzes(cid) {
+export function findQuizzesForCourse(cid) {
     return model.find({ course: cid });
 }
 
