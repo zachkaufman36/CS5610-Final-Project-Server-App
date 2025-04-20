@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import model from './model.js';
 
 export function findQuizzesForCourse(cid) {
@@ -5,7 +6,8 @@ export function findQuizzesForCourse(cid) {
 }
 
 export function createQuiz(quiz) {
-    return model.create(quiz);
+    const newQuiz = { ...quiz, _id: uuidv4() }
+    return model.create(newQuiz);
 }
 
 export function deleteQuiz(quizId) {

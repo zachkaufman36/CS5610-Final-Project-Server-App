@@ -37,7 +37,7 @@ function QuestionRoutes(app) {
     app.get('/api/Quizzes/:quizId/questions/count', async (req, res) => {
         const { quizId } = req.params;
         const questions = await dao.findQuestionByQuiz(quizId);
-        res.send(questions.length);
+        res.status(200).send({ value: questions.length });
     });
 
     // get total points For A Quiz
@@ -45,7 +45,7 @@ function QuestionRoutes(app) {
         const { quizId } = req.params;
         const questions = await dao.findQuestionByQuiz(quizId);
         const totalPoints = questions.reduce((sum, question) => sum + (question.points || 0), 0);
-        res.send({ totalPoints: totalPoints });
+        res.status(200).send({ points: totalPoints });
     });
 }
 export default QuestionRoutes;

@@ -65,6 +65,10 @@ const quizzesSchema = new mongoose.Schema(
             type: Boolean,
             default: false,
         },
+        questionCount: {
+            type: Number,
+            default: 0
+        },
         due: String,
         availableFrom: String,
         availableUntil: String,
